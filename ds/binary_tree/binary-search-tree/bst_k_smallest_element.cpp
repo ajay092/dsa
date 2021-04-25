@@ -2,13 +2,15 @@
 
 using namespace std;
 
-class Node{
+class Node
+{
 	public:
 		int data;
 		Node *left;
 		Node *right;
 		
-		Node (int data){
+		Node (int data)
+		{
 			this->data = data;
 			left = NULL;
 			right = NULL;
@@ -82,7 +84,7 @@ class Node{
 			if(count==k && !s.empty()) return curr->data;
 			curr = curr->right;
 		}
-		cout<<"Invalid k value...returning garbage\n";
+		cout << "Invalid k value...returning garbage\n";
 		return -36727;
 	}
 
@@ -96,10 +98,10 @@ int main(){
 	}
 	
 	inOrder(root);
-	cout<<endl;
+	cout << endl;
 	
-	cout<<kSmallest(root, k)<<endl;
+	cout << kSmallest(root, k) << endl;
 	
-	cout<<endl;
+	cout << endl;
 	
 }
